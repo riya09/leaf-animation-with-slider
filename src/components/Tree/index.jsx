@@ -1,7 +1,6 @@
 import { useEffect,useState, useRef } from 'react'
 import './index.scss'
 import Leaf from './Leaf';
-import { TransitionGroup } from 'react-transition-group';
 
 const Tree = ({ year, yearIndex }) => {
   const createArray = (n) => Array.from({ length: n + 1 });
