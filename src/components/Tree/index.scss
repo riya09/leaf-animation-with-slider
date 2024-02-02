@@ -1,0 +1,65 @@
+:root {
+  --leftY: -10px;
+  --rightY: -20px;
+}
+.tree-wrapper {
+  width: 100%;
+  .pot {
+    position: relative;
+    width: 60px;
+    height: 50px;
+    background-color: #efcc1e;
+    .branch {
+      width: 5px;
+      background: limegreen;
+      position: absolute;
+      bottom: 50px;
+      left: 30px;
+      transition: 0.4s height ease-out;
+    }
+  
+    .leaf {
+      width: 25px;
+      height: 25px;
+      background: limegreen;
+      position: absolute;
+      bottom: 0;
+      border-radius: 20px 0;
+      transition: 1s transform ease;
+  
+      &.right {
+        left: 5px;
+        transform-origin: bottom left;
+      }
+  
+      &.left {
+        right: 5px;
+        bottom: -20px;
+        transform-origin: top right;
+      }
+  
+      &.top {
+        top: 0;
+        left: -10px;
+        transform: translate(0px, -10px) rotate(135deg);
+      }
+    }
+  }
+}
+.item-enter {
+  opacity: 0;
+}
+
+.item-enter-active {
+  opacity: 1;
+  transition: opacity 500ms ease-in;
+}
+
+.item-exit {
+  opacity: 1;
+}
+
+.item-exit-active {
+  opacity: 0;
+  transition: opacity 500ms ease-in;
+}
