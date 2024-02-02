@@ -1,11 +1,12 @@
 import { useState } from 'react'
 import './index.scss'
 
-const Slider = () => {
+const Slider = ({getVal}) => {
   const labels = ['0', '3', '5', '8', '10']
   const [val, setVal] = useState(0)
   const updateValue = (val) => {
     setVal(val)
+    getVal(labels[Number(val)], val)
   }
   return (
     <div className="range">
