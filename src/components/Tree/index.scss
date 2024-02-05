@@ -2,10 +2,11 @@
   .tree {
     position: relative;
     height: 60px;
+    width: 80px;
     .pot {
       position: absolute;
       left: 0;
-      top: 0;
+      top: 4px;
     }
     .branch {
       width: 5px;
@@ -14,6 +15,7 @@
       bottom: 50px;
       left: 30px;
       transition: 0.4s height ease-out;
+      will-change: height;
     }
   
     .leaf {

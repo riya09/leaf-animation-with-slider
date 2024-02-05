@@ -1,6 +1,6 @@
 import { useState } from 'react'
+import Slider from './components/Slider'
 import './App.css'
-import Slider from "./components/Slider"
 import Tree from './components/Tree'
 
 function App() {
@@ -9,14 +9,13 @@ function App() {
   const getValueFromSlider = (sliderYear, sliderYearIndex) => {
     setYear(sliderYear)
     setYearIndex(Number(sliderYearIndex))
-  } 
+  }
   return (
-    <>
-      <p>Tree animation</p>
+    <div className="interaction-wrapper">
       <Tree year={year} yearIndex={yearIndex} />
       <Slider getVal={(y, i) => getValueFromSlider(y, i)} />
-    </>
-  );
+    </div>
+  )
 }
 
 export default App
