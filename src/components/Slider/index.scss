@@ -1,9 +1,10 @@
 $range-height: 2px;
 $slider-size: 22px;
 $slider-range-width: 20rem;
+$color: #cbcbd8;
 
 @mixin track-style {
-  background: #ffffff;
+  background: $color;
   border-radius: 8px;
   height: $range-height;
 }
@@ -19,7 +20,7 @@ $slider-range-width: 20rem;
   transform: translate(0, 0) rotate(135deg);
   border: none;
   cursor: pointer;
-  background: #237ac6;
+  background: #0EB0F6;
 }
 .ticks {
   display: flex;
@@ -29,9 +30,10 @@ $slider-range-width: 20rem;
   span {
     display: flex;
     justify-content: center;
-    width: 1px;
+    width: 2px;
     height: 8px;
-    background: #d3d3d3;
+    background: $color;
+    color: $color;
     line-height: 40px;
   }
 }
