@@ -1,17 +1,15 @@
-:root {
-  --leftY: -10px;
-  --rightY: -20px;
-}
 .tree-wrapper {
-  width: 100%;
-  .pot {
+  .tree {
     position: relative;
-    width: 60px;
-    height: 50px;
-    background-color: #efcc1e;
+    height: 60px;
+    .pot {
+      position: absolute;
+      left: 0;
+      top: 0;
+    }
     .branch {
       width: 5px;
-      background: limegreen;
+      background: #04B424;
       position: absolute;
       bottom: 50px;
       left: 30px;
@@ -19,29 +17,31 @@
     }
   
     .leaf {
-      width: 25px;
-      height: 25px;
-      background: limegreen;
       position: absolute;
       bottom: 0;
-      border-radius: 20px 0;
-      transition: 1s transform ease;
+      transition: 0.8s transform ease;
   
       &.right {
-        left: 5px;
+        left: 0px;
         transform-origin: bottom left;
+        bottom: 2px;
       }
   
       &.left {
-        right: 5px;
+        right: 0;
         bottom: -20px;
         transform-origin: top right;
       }
   
       &.top {
+        width: 25px;
+        height: 25px;
+        bottom: -25px;
+        border-radius: 20px 0;
         top: 0;
         left: -10px;
         transform: translate(0px, -10px) rotate(135deg);
+        background-color: #04B424;
       }
     }
   }
