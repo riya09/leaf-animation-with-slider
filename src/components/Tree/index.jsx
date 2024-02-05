@@ -16,7 +16,7 @@ const Tree = ({ year, yearIndex }) => {
       clearTimeout(timer)
     }
   }, [yearIndex, leaves])
-
+  
 
   return (
     <div className="tree-wrapper">

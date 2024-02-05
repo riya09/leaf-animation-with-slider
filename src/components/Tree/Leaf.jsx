@@ -1,5 +1,5 @@
-import { useState, useEffect, useRef } from "react"
-import { CSSTransition } from "react-transition-group"
+import { useState, useEffect, useRef } from 'react'
+import { CSSTransition } from 'react-transition-group'
 
 const Leaf = ({ index, visible }) => {
   const [isEntered, setIsEntered] = useState(false)
@@ -18,8 +18,7 @@ const Leaf = ({ index, visible }) => {
     }
     const offset = 24
     const yPosition = initialPosition.y + (index * offset)
-    const transform = `translate(0, ${-yPosition}px) rotate(${initialPosition.deg}deg)`
-    return transform
+    return `translate(0, ${-yPosition}px) rotate(${initialPosition.deg}deg)`
   }
   return (
     <CSSTransition
