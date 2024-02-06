@@ -4,6 +4,7 @@ html {
   width: 100%;
   display: grid;
   place-items: center;
+  background: #f6f3f3;
 }
 
 body {
