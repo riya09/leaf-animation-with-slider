@@ -19,7 +19,7 @@
       .leaf {
         position: absolute;
         bottom: 0;
-        transition: 0.8s transform ease;
+        transition: 0.8s transform cubic-bezier(.44, -0.01, .52, 1);
     
         &.right {
           left: 0px;

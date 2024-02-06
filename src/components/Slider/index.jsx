@@ -14,7 +14,7 @@ const Slider = ({getVal}) => {
     getVal(labels[Number(val)], val)
   }
   return (
-    <div className="range">
+    <>
       <div className="range">
         <input
           type="range"
@@ -30,7 +30,7 @@ const Slider = ({getVal}) => {
         ))}
       </div>
       </div>
-    </div>
+    </>
   );
 }
  

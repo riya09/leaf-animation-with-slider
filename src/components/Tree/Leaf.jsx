@@ -22,7 +22,7 @@ const Leaf = ({ index, visible }) => {
     <CSSTransition
       in={isEntered && visible}
       nodeRef={nodeRef}
-      timeout={30}
+      timeout={0}
       classNames="item"
     >
       {(state) => (
