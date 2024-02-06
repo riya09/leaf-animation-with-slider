@@ -1,9 +1,14 @@
-import { useState } from 'react'
+import { useState, useEffect } from 'react'
 import './index.scss'
-
+import { labels } from '../utils/constant'
 const Slider = ({getVal}) => {
-  const labels = ['0', '3', '5', '8', '10']
   const [val, setVal] = useState(0)
+
+  useEffect(() => {
+    const progress = (100 / (labels.length - 1)) * val
+    document.documentElement.style.setProperty('--progress', `${progress}%`);
+  }, [val])
+
   const updateValue = (val) => {
     setVal(val)
     getVal(labels[Number(val)], val)
