@@ -11,11 +11,14 @@ function App() {
     setYearIndex(Number(sliderYearIndex))
   }
   return (
-    <div className="interaction-wrapper">
-      <Tree year={year} yearIndex={yearIndex} />
-      <Slider getVal={(y, i) => getValueFromSlider(y, i)} />
-    </div>
-  )
+    <>
+      <h3>Choose Your Investment Period</h3>
+      <div className="interaction-wrapper">
+        <Tree year={year} yearIndex={yearIndex} />
+        <Slider getVal={(y, i) => getValueFromSlider(y, i)} />
+      </div>
+    </>
+  );
 }
 
 export default App
