@@ -1,6 +1,7 @@
 import { useEffect,useState, useRef } from 'react'
 import './index.scss'
-import Leaf from './Leaf';
+import Leaf from './Leaf'
+import { OFFSET } from '../utils/constant'
 
 const Tree = ({ year, yearIndex }) => {
   const createArray = (n) => Array.from({ length: n + 1 })
@@ -8,7 +9,7 @@ const Tree = ({ year, yearIndex }) => {
   const treePot = useRef(null)
 
   useEffect(() => {
-    treePot.current.style.height = `${(yearIndex * 25) + 45}px`
+    treePot.current.style.height = `${(yearIndex * OFFSET) + 45}px`
     let timer = setTimeout(() => {
       setLeaves(createArray(yearIndex));
     }, leaves.length > yearIndex + 1 ? 1500 : 0)

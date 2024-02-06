@@ -1,11 +1,11 @@
 import { useState, useEffect, useRef } from 'react'
 import { CSSTransition } from 'react-transition-group'
+import { OFFSET } from '../utils/constant'
 
 const Leaf = ({ index, visible }) => {
   const [isEntered, setIsEntered] = useState(false)
   const nodeRef = useRef(null)
   const directions = ['left', 'right']
-
   useEffect(() => {
     // Trigger the animation after the initial render
     setIsEntered(true)
@@ -13,13 +13,9 @@ const Leaf = ({ index, visible }) => {
 
   const setLeafPosition = (index, direction) => {
     const isLeft = direction === 'left'
-    const initialPosition = {
-      y: 0,
-      deg: isLeft ? 80 : 15,
-    }
-    const offset = 24
-    const yPosition = initialPosition.y + (index * offset)
-    return `translate(0, ${-yPosition}px) rotate(${initialPosition.deg}deg)`
+    const deg = isLeft ? 75 : 5
+    const yPosition = index * OFFSET
+    return `translate(0, ${-yPosition}px) rotate(${deg}deg)`
   }
   return (
     <CSSTransition
@@ -41,8 +37,8 @@ const Leaf = ({ index, visible }) => {
               className={`leaf ${direction}`}
             >
               <svg
-                width="25"
-                height="25"
+                width={OFFSET}
+                height={OFFSET}
                 viewBox="0 0 34 26"
                 fill="none"
                 xmlns="http://www.w3.org/2000/svg"
