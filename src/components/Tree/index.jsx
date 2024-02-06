@@ -27,7 +27,14 @@ const Tree = ({ year, yearIndex }) => {
           {leaves.map((_, l) => (
             <Leaf index={l} key={l} visible={l < yearIndex + 1} />
           ))}
-          <div className="leaf top">
+          <div
+            className="leaf top"
+            style={{
+              width: `${OFFSET}px`,
+              height: `${OFFSET}px`,
+              top: `-${OFFSET - 12}px`,
+              left: `-${Math.floor(OFFSET / 2) - 3}px`
+            }}>
             <LeafStyle />
           </div>
         </div>
