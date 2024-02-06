@@ -2,6 +2,7 @@ import { useEffect,useState, useRef } from 'react'
 import './index.scss'
 import Leaf from './Leaf'
 import { OFFSET } from '../utils/constant'
+import LeafStyle from './LeafStyle'
 
 const Tree = ({ year, yearIndex }) => {
   const createArray = (n) => Array.from({ length: n + 1 })
@@ -26,7 +27,9 @@ const Tree = ({ year, yearIndex }) => {
           {leaves.map((_, l) => (
             <Leaf index={l} key={l} visible={l < yearIndex + 1} />
           ))}
-          <div className="leaf top"></div>
+          <div className="leaf top">
+            <LeafStyle />
+          </div>
         </div>
         <svg
           className="pot"
