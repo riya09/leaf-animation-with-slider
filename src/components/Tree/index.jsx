@@ -7,10 +7,10 @@ import LeafStyle from './LeafStyle'
 const Tree = ({ yearIndex }) => {
   const createArray = (n) => Array.from({ length: n + 1 })
   const [leaves, setLeaves] = useState(createArray(yearIndex))
-  const treePot = useRef(null)
+  const branch = useRef(null)
 
   useEffect(() => {
-    treePot.current.style.height = `${(yearIndex * OFFSET) + 45}px`
+    branch.current.style.height = `${(yearIndex * OFFSET) + 45}px`
     let timer = setTimeout(() => {
       setLeaves(createArray(yearIndex));
     }, leaves.length > yearIndex + 1 ? 1500 : 0)
@@ -23,7 +23,7 @@ const Tree = ({ yearIndex }) => {
   return (
     <div className="tree-wrapper">
       <div className="tree">
-        <div ref={treePot} className="branch">
+        <div ref={branch} className="branch">
           {leaves.map((_, l) => (
             <Leaf index={l} key={l} visible={l < yearIndex + 1} />
           ))}
