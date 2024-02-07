@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Slider from './components/Slider'
-import './App.css'
+import './App.scss'
 import Tree from './components/Tree'
 
 function App() {
@@ -12,7 +12,9 @@ function App() {
   }
   return (
     <>
-      <h3>Choose Your Investment Period</h3>
+      <div className="text-content">
+        <h3>Choose Your Investment Period</h3>
+      </div>
       <div className="interaction-wrapper">
         <Tree year={year} yearIndex={yearIndex} />
         <Slider getVal={(y, i) => getValueFromSlider(y, i)} />

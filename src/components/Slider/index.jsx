@@ -24,14 +24,15 @@ const Slider = ({getVal}) => {
           step="1"
           onChange={(e) => updateValue(e.target.value)}
         />
-      <div className="ticks">
+        <div className="ticks">
         {labels.map((label, l) => (
           <span value={label} key={l}>{label}</span>
         ))}
-      </div>
+        </div>
+        <p className="tick-label">in years</p>
       </div>
     </>
-  );
+  )
 }
  
 export default Slider;
