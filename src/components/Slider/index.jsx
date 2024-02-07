@@ -11,7 +11,7 @@ const Slider = ({getVal}) => {
 
   const updateValue = (val) => {
     setVal(val)
-    getVal(labels[Number(val)], val)
+    getVal(Number(val))
   }
   return (
     <>
@@ -29,7 +29,7 @@ const Slider = ({getVal}) => {
           <span value={label} key={l}>{label}</span>
         ))}
         </div>
-        <p className="tick-label">in years</p>
+        <p>in years</p>
       </div>
     </>
   )

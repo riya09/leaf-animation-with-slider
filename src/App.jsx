@@ -4,10 +4,8 @@ import './App.scss'
 import Tree from './components/Tree'
 
 function App() {
-  const [year, setYear] = useState(0)
   const [yearIndex, setYearIndex] = useState(0)
-  const getValueFromSlider = (sliderYear, sliderYearIndex) => {
-    setYear(sliderYear)
+  const getValueFromSlider = (sliderYearIndex) => {
     setYearIndex(Number(sliderYearIndex))
   }
   return (
@@ -16,8 +14,8 @@ function App() {
         <h3>Choose Your Investment Period</h3>
       </div>
       <div className="interaction-wrapper">
-        <Tree year={year} yearIndex={yearIndex} />
-        <Slider getVal={(y, i) => getValueFromSlider(y, i)} />
+        <Tree yearIndex={yearIndex} />
+        <Slider getVal={(idx) => getValueFromSlider(idx)} />
       </div>
     </>
   );

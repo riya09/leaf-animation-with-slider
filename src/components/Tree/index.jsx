@@ -4,7 +4,7 @@ import Leaf from './Leaf'
 import { OFFSET } from '../utils/constant'
 import LeafStyle from './LeafStyle'
 
-const Tree = ({ year, yearIndex }) => {
+const Tree = ({ yearIndex }) => {
   const createArray = (n) => Array.from({ length: n + 1 })
   const [leaves, setLeaves] = useState(createArray(yearIndex))
   const treePot = useRef(null)
