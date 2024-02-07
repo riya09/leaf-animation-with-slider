@@ -4,10 +4,6 @@ $slider-height: 28px;
 $slider-range-width: 20rem;
 $color: #8b5d64;
 
-:root {
-  --progress: 0%;
-}
-
 @mixin track-style {
   background: linear-gradient(to top, #97deff 70%, #6fcef9 30%),
       linear-gradient(to top, #ffd096 70%, #ffbb91 30%);
@@ -38,7 +34,7 @@ $color: #8b5d64;
   display: flex;
   justify-content: space-between;
   padding: 0px 8px 0 10px;
-  margin-top: 4px;
+  margin: 4px 0 30px;
   span {
     display: flex;
     justify-content: center;
@@ -49,6 +45,11 @@ $color: #8b5d64;
     line-height: 40px;
     user-select: none;
   }
+}
+p.tick-label {
+  color: $color;
+  text-align: center;
+  font-size: 12px;
 }
 .range {
   width: $slider-range-width;
