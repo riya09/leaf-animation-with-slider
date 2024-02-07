@@ -1,8 +1,7 @@
-# React + Vite
+# Slider Interaction
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+### Micro-interaction project built with React + Vite. 
+![](https://ik.imagekit.io/8nyszdblwle/blog/leave-animation.gif)
 
-Currently, two official plugins are available:
+For the leaf animation, `react-transition-group` package has been used. The slider has been customized by updating the CSS of range and thumb of native input.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react/README.md) uses [Babel](https://babeljs.io/) for Fast Refresh
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react-swc) uses [SWC](https://swc.rs/) for Fast Refresh
