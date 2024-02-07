@@ -29,7 +29,7 @@ const Slider = ({getVal}) => {
           <span value={label} key={l}>{label}</span>
         ))}
         </div>
-        <p>in years</p>
+        <p className="tick-label">in years</p>
       </div>
     </>
   )
