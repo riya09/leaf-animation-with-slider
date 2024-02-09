@@ -23,7 +23,6 @@ const Leaf = ({ index, visible }) => {
       in={isEntered && visible}
       nodeRef={nodeRef}
       timeout={0}
-      classNames="item"
     >
       {(state) => (
         <div ref={nodeRef}>
@@ -43,7 +42,7 @@ const Leaf = ({ index, visible }) => {
         </div>
       )}
     </CSSTransition>
-  );
-};
+  )
+}
 
 export default Leaf;
