@@ -17,8 +17,31 @@ function App() {
         <Tree yearIndex={yearIndex} />
         <Slider getVal={(idx) => getValueFromSlider(idx)} />
       </div>
+      <div className="credits">
+        <span>
+          Developed By
+          <a
+            href="https://github.com/riya09"
+            rel="noreferrer"
+            target="_blank"
+            className="developer"
+          >
+            riya09
+          </a>
+        </span>
+        <span>
+          Design Inspiration:
+          <a
+            href="https://dribbble.com/shots/3710509-Application-Process-Interaction"
+            rel="noreferrer"
+            target="_blank"
+          >
+            Johny Vino
+          </a>
+        </span>
+      </div>
     </>
   );
 }
 
-export default App
+export default App;
